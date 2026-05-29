@@ -9,4 +9,4 @@ if (balance >= 0) {
     console.log("Prelievo effettuato. " + "Saldo aggiornato: " + (balance - money))
 } else {
     console.log("Saldo insufficiente")
-}   
+};
