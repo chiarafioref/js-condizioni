@@ -1,14 +1,22 @@
 console.log("connesso");
 
+// DICHIARAZIONE
 let temperature = prompt("Quanti gradi ci sono fuori?");
-let rain = "si";
+let message;
 
+
+// LOGICA
 if (temperature < 15) {
-    prompt("Piove?")
-} else if (temperature < 15) {
-    console.log("Metti impermeabile")
-} else if (temperature < 15 && rain === "si") {
-    console.log("Metti giacca")
-} else if (temperature >= 15) {
-    console.log("Vai leggero")
-};
+    let rain = prompt("Piove?")
+    if (rain.toLowerCase() === "si") {
+        message = "metti l'impermeabile";
+    } else {
+        message = "metti la giacca";
+    }
+} else {
+    message = "vai leggero";
+}
+
+
+// OUTPUT
+console.log(message);

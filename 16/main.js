@@ -1,13 +1,17 @@
 console.log("connesso");
 
-let textbalance = prompt("Qual è il tuo saldo attuale?");
-let balance = Number(textbalance);
+let textBalance = prompt("Qual è il tuo saldo attuale?");
+let balance = Number(textBalance);
 
-if (balance >= 0) {
-    let textmoney = prompt("Quale importo vuoi prelevare?")
-    let money = Number(textmoney)
-} if (balance >= money) {
-    console.log("Prelievo effettuato. " + "Saldo aggiornato: " + (balance - money))
+if (balance > 0) {
+    let textMoney = prompt("Quale importo vuoi prelevare?")
+    let money = Number(textMoney)
+    if (balance >= money) {
+        balance = balance - money;
+        console.log("Prelievo effettuato. " + "Saldo aggiornato: " + balance)
+    } else {
+        console.error("Saldo insufficiente")
+    }
 } else {
-    console.log("Saldo insufficiente")
-};
+    console.warn("Importo non valido");
+}
